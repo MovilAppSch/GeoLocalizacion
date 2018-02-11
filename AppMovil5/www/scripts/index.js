@@ -58,10 +58,12 @@
 
     function getDatos() {
         alert("llego a getDatos");
-        navigator.geolocation.getCurrentPosition(onSuccess, onError, {
-            maximumAge: 300000,
-            timeout: 10000,
-            enableHighAccuracy: true
-        });
+        navigator.geolocation.getCurrentPosition(onSuccess)
+            //    ,onError
+            //, {
+            //    maximumAge: 300000,
+            //    timeout: 10000,
+            //    enableHighAccuracy: true
+            //});
     }
 })();
