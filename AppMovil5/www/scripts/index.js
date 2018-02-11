@@ -60,6 +60,6 @@
     }
 
     function onError(err) {
-        console.log("codigo de err:" + err.code + "msj = " + err.message);
+        alert.log("codigo de err:" + err.code + "msj = " + err.message);
     }
 })();
