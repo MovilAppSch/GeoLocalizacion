@@ -24,6 +24,7 @@
     };
 
     function getDatos() {
+        alert("llego a getDatos");
         navigator.geolocation.getCurrentPosition(onSucces, onError, {
             maximumAge: 300000,
             timeout: 10000,
@@ -32,6 +33,7 @@
     }
 
     function onSucces(position) {
+        alert("llego a onSucces");
         var cusLat = position.coords.latitude;
         var cusLon = position.coords.longitude;
 
