@@ -23,16 +23,7 @@
         // TODO: esta aplicación se ha reactivado. Restaure el estado de la aplicación aquí.
     };
 
-    function getDatos() {
-        alert("llego a getDatos");
-        navigator.geolocation.getCurrentPosition(onSucces, onError, {
-            maximumAge: 300000,
-            timeout: 10000,
-            enableHighAccuracy: true
-        });
-    }
-
-    function onSucces(position) {
+    var onSuccess = function (position) {
         alert("llego a onSucces");
         var cusLat = position.coords.latitude;
         var cusLon = position.coords.longitude;
@@ -61,7 +52,16 @@
         }
     }
 
-    function onError(err) {
+    var onError = function (err) {
         alert.log("codigo de err:" + err.code + "msj = " + err.message);
+    }
+
+    function getDatos() {
+        alert("llego a getDatos");
+        navigator.geolocation.getCurrentPosition(onSuccess, onError, {
+            maximumAge: 300000,
+            timeout: 10000,
+            enableHighAccuracy: true
+        });
     }
 })();
