@@ -57,13 +57,11 @@
     }
 
     function getDatos() {
-        var result = navigator.geolocation.getCurrentPosition(onSuccess)
-        //    ,onError
-        //, {
-        //    maximumAge: 300000,
-        //    timeout: 10000,
-        //    enableHighAccuracy: true
-        //});
-        alert(result);
+        navigator.geolocation.watchPosition(onSuccess,onError
+        , {
+            maximumAge: 300000,
+            timeout: 10000,
+            enableHighAccuracy: true
+        });
     }
 })();
