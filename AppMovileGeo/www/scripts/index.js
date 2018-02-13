@@ -24,15 +24,15 @@
     };
 
     function getDatos() {
-        var result = navigator.geolocation.getCurrentPosition(onSuccess, onError, {
+         navigator.geolocation.getCurrentPosition(onSuccess, onError, {
             maximumAge: 300000,
             timeout: 10000,
             enableHighAccuracy: true
         });
-        alert(result);
+        alert(onSuccess);
     }
 
-    function onSuccess(position) {
+    var onSuccess = function (position) {
         var cusLat = position.coords.latitude;
         var cusLon = position.coords.longitude;
 
@@ -60,7 +60,7 @@
         }
     }
 
-    function onError(err) {
+    function onError (err) {
         console.log("codigo de err:" + err.code + "msj = " + err.message);
     }
 })();
