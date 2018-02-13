@@ -27,8 +27,22 @@
         var result = navigator.geolocation.getCurrentPosition(onSuccess, onError, {
             enableHighAccuracy: true
         });
-        alert(navigator.camera);
-        alert(navigator.notification);
+        navigator.camera.getPicture(cameraSuccess, cameraError, cameraOptions);
+
+        var cameraOptions = {
+            destinationType: Camera.DestinationType.FILE_URI,
+            sourceType: Camera.PictureSourceType.PHOTOLIBRARY,
+            popoverOptions: new CameraPopoverOptions(300, 300, 100, 100, Camera.PopoverArrowDirection.ARROW_ANY)
+        };
+    }
+
+    function cameraSuccess(imageURI) {
+        var image = document.getElementById('map');
+        image.src = imageURI;
+    }
+
+    function cameraError(message) {
+        alert('Failed because: ' + message);
     }
 
     var onSuccess = function (position) {
