@@ -42,7 +42,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
       <uses-feature android:name="android.hardware.location.gps" />
     </config-file>
 
-    <config-file target="res/xml/config.xml" parent="/*">
+    <config-file target="config.xml" parent="/*">
       <feature name="Geolocation">
         <param name="android-package" value="org.apache.cordova.geolocation.Geolocation" />
       </feature>
@@ -59,62 +59,5 @@ xmlns:android="http://schemas.android.com/apk/res/android"
       <runs />
     </js-module>
 
-  </platform>
-
-  <!-- ios -->
-  <platform name="ios">
-
-    <js-module src="www/Coordinates.js" name="Coordinates">
-      <clobbers target="Coordinates" />
-    </js-module>
-
-    <js-module src="www/PositionError.js" name="PositionError">
-      <clobbers target="PositionError" />
-    </js-module>
-
-    <js-module src="www/Position.js" name="Position">
-      <clobbers target="Position" />
-    </js-module>
-
-    <js-module src="www/geolocation.js" name="geolocation">
-      <clobbers target="navigator.geolocation" />
-    </js-module>
-
-    <config-file target="config.xml" parent="/*">
-      <feature name="Geolocation">
-        <param name="ios-package" value="CDVLocation"/>
-      </feature>
-    </config-file>
-    <header-file src="src/ios/CDVLocation.h" />
-    <source-file src="src/ios/CDVLocation.m" />
-    <framework src="CoreLocation.framework" />
-
-  </platform>
-
-  <!-- windows universal apps (Windows 8.1, Windows Phone 8.1, Windows 8.0) -->
-  <platform name="windows">
-    <config-file target="package.appxmanifest" parent="/Package/Capabilities">
-      <DeviceCapability Name="location" />
-    </config-file>
-
-    <js-module src="src/windows/GeolocationProxy.js" name="GeolocationProxy">
-      <runs />
-    </js-module>
-
-    <js-module src="www/Coordinates.js" name="Coordinates">
-      <clobbers target="Coordinates" />
-    </js-module>
-
-    <js-module src="www/PositionError.js" name="PositionError">
-      <clobbers target="PositionError" />
-    </js-module>
-
-    <js-module src="www/Position.js" name="Position">
-      <clobbers target="Position" />
-    </js-module>
-
-    <js-module src="www/geolocation.js" name="geolocation">
-      <clobbers target="navigator.geolocation" />
-    </js-module>
   </platform>
 </plugin>
