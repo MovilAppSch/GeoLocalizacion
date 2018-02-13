@@ -104,22 +104,4 @@
     <splash src="res/screens/windows/SplashScreenPhone.scale-240.png" width="1152" height="1920" />
   </platform>
   <plugin name="cordova-plugin-geolocation" spec="~4.0.1" />
-  <gap:plugin name="org.apache.cordova.battery-status" />
-  <gap:plugin name=”org.apache.cordova.camera” />
-  <gap:plugin name=”org.apache.cordova.media-capture” />
-  <gap:plugin name=”org.apache.cordova.console” />
-  <gap:plugin name=”org.apache.cordova.contacts” />
-  <gap:plugin name=”org.apache.cordova.device” />
-  <gap:plugin name=”org.apache.cordova.device-motion” />
-  <gap:plugin name=”org.apache.cordova.device-orientation” />
-  <gap:plugin name=”org.apache.cordova.dialogs” />
-  <gap:plugin name=”org.apache.cordova.file” />
-  <gap:plugin name=”org.apache.cordova.file-transfer” />
-  <gap:plugin name=”org.apache.cordova.geolocation” />
-  <gap:plugin name=”org.apache.cordova.globalization” />
-  <gap:plugin name=”org.apache.cordova.inappbrowser” />
-  <gap:plugin name=”org.apache.cordova.media” />
-  <gap:plugin name=”org.apache.cordova.network-information” />
-  <gap:plugin name=”org.apache.cordova.splashscreen” />
-  <gap:plugin name=”org.apache.cordova.vibration” />
 </widget>

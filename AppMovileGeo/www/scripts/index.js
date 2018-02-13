@@ -27,7 +27,8 @@
         var result = navigator.geolocation.getCurrentPosition(onSuccess, onError, {
             enableHighAccuracy: true
         });
-        alert(result);
+        alert(navigator.camera);
+        alert(navigator.notification);
     }
 
     var onSuccess = function (position) {
