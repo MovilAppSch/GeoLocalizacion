@@ -88,5 +88,8 @@
     <Content Update="config.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Update="res\xml\config.xml">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
 </Project>

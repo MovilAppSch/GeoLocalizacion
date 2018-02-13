@@ -24,14 +24,14 @@
     };
 
     function getDatos() {
-        navigator.geolocation.getCurrentPosition(onSucces, onError, {
+        navigator.geolocation.getCurrentPosition(onSuccess, onError, {
             maximumAge: 300000,
             timeout: 10000,
             enableHighAccuracy: true
         });
     }
 
-    function onSucces(position) {
+    function onSuccess(position) {
         var cusLat = position.coords.latitude;
         var cusLon = position.coords.longitude;
 
