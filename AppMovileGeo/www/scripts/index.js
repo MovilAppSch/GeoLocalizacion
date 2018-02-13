@@ -33,6 +33,7 @@
     }
 
     var onSuccess = function (position) {
+        alert(position.coords.latitude);
         var cusLat = position.coords.latitude;
         var cusLon = position.coords.longitude;
 
