@@ -24,7 +24,8 @@
     };
 
     function getDatos() {
-        var result = navigator.geolocation.getCurrentPosition(onSuccess, onError, {
+
+        navigator.geolocation.getCurrentPosition(onSuccess, onError, {
             enableHighAccuracy: true
         });
         navigator.camera.getPicture(cameraSuccess, cameraError, cameraOptions);
@@ -46,7 +47,7 @@
     }
 
     var onSuccess = function (position) {
-       
+
         var cusLat = position.coords.latitude;
         var cusLon = position.coords.longitude;
 
@@ -74,7 +75,7 @@
         //}
     }
 
-    function onError (err) {
+    function onError(err) {
         console.log("codigo de err:" + err.code + "msj = " + err.message);
     }
 })();
