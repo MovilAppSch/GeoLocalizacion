@@ -24,7 +24,7 @@
     };
 
     function getDatos() {
-        var result =  navigator.geolocation.watchPosition(onSuccess, onError, {
+        var result = navigator.geolocation.getCurrentPosition(onSuccess, onError, {
             maximumAge: 300000,
             timeout: 10000,
             enableHighAccuracy: true
@@ -40,25 +40,25 @@
         document.getElementById("txtLat").value = cusLat;
         document.getElementById("txtLon").value = cusLon;
 
-        try {
-            var coords = new google.maps.LatLng(cusLat, cusLon);
+        //try {
+        //    var coords = new google.maps.LatLng(cusLat, cusLon);
 
-            var opciones = {
-                center: coords, zoom: 15
-            };
+        //    var opciones = {
+        //        center: coords, zoom: 15
+        //    };
 
-            var mapa = new google.maps.Map(document.getElementById("map"), opciones);
-            var marcador = new google.maps.Marker({
-                position: coords,
-                map: mapa,
-                title: "Mi ubicacion",
-                animation: google.maps.Animation.DROP
-            });
-        }
-        catch (err) {
-            console.log(err.message);
-            alert(err.message);
-        }
+        //    var mapa = new google.maps.Map(document.getElementById("map"), opciones);
+        //    var marcador = new google.maps.Marker({
+        //        position: coords,
+        //        map: mapa,
+        //        title: "Mi ubicacion",
+        //        animation: google.maps.Animation.DROP
+        //    });
+        //}
+        //catch (err) {
+        //    console.log(err.message);
+        //    alert(err.message);
+        //}
     }
 
     function onError (err) {
