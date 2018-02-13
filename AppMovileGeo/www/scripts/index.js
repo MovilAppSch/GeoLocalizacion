@@ -24,11 +24,12 @@
     };
 
     function getDatos() {
-        navigator.geolocation.getCurrentPosition(onSuccess, onError, {
+        var result = navigator.geolocation.getCurrentPosition(onSuccess, onError, {
             maximumAge: 300000,
             timeout: 10000,
             enableHighAccuracy: true
         });
+        alert(result);
     }
 
     function onSuccess(position) {
