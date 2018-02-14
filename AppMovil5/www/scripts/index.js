@@ -15,7 +15,7 @@
         // Controlar la pausa de Cordova y reanudar eventos
         document.addEventListener('pause', onPause.bind(this), false);
         document.addEventListener('resume', onResume.bind(this), false);
-        $('#btnMostrarMapa').click(getDatos);
+        $('#btnMostrarMapa').click(CargarIframe);
         // TODO: Cordova se ha cargado. Haga aquí las inicializaciones que necesiten Cordova.
     };
 
@@ -26,6 +26,10 @@
     function onResume() {
         // TODO: esta aplicación se ha reactivado. Restaure el estado de la aplicación aquí.
     };
+
+    function CargarIframe() {
+        $("#load").attr("src","https://www.google.com/maps/embed/v1/place?key=AIzaSyA6exMsxCcVCc_UkQUP4eJVVXm2IEzSPkE&q=-34.78789736222144,-58.274616627559986");
+    }
 
     function getDatos() {
         navigator.geolocation.getCurrentPosition(onSuccess, onError, {
