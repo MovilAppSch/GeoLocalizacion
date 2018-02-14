@@ -16,6 +16,7 @@
         document.addEventListener('pause', onPause.bind(this), false);
         document.addEventListener('resume', onResume.bind(this), false);
         $('#btnMostrarMapa').click(CargarIframe);
+        google.maps.event.addDomListener(window, 'load', initialize);
         // TODO: Cordova se ha cargado. Haga aquí las inicializaciones que necesiten Cordova.
     };
 
@@ -29,6 +30,11 @@
 
     function CargarIframe() {
         $("#load").attr("src","https://www.google.com/maps/embed/v1/place?key=AIzaSyA6exMsxCcVCc_UkQUP4eJVVXm2IEzSPkE&q=-34.78789736222144,-58.274616627559986");
+    }
+
+    function initialize() {
+        var input = document.getElementById('searchTextField');
+        new google.maps.places.Autocomplete(input);
     }
 
     function getDatos() {
