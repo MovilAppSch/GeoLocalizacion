@@ -32,7 +32,7 @@
     </style>
     <title>AppMovil5</title>
 </head>
-<body>
+<body><iframe frameborder="0" style="border:0" src="Gelocation.html"></iframe>
     <div data-role="page" id="pagina1">
         <div data-role="header">
             <h1>Geolocalizacion</h1>
@@ -41,18 +41,6 @@
             <div id="datos" class="">
                 <button id="btnMostrarMapa">Mostrar Mapa</button>
                 <div class="ui-field-contain">
-                    <script>
-                        (function () {
-                            navigator.geolocation.getCurrentPosition(onSuccess);
-                            function onSuccess(position) {
-
-                                var cusLat = position.coords.latitude;
-                                var cusLon = position.coords.longitude;
-
-                                document.getElementById("txtLat").value = cusLat;
-                                document.getElementById("txtLon").value = cusLon;
-                            }
-                        })();</script>
                     <label for="txtLat">Latitud:</label>
                     <input id="txtLat" type="text" value="" readonly />
                     <label for="txtLon">Longitud:</label>
@@ -60,17 +48,13 @@
                 </div>
             </div>
         </div>
-        <div id="contenedor-responsive">
-            <iframe width="315"
-                    height="315"
-                    frameborder="0" style="border:0" id="load" src="" allowfullscreen></iframe>
-        </div>
+        <div id="map"></div>
     </div>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="scripts/platformOverrides.js"></script>
     <script type="text/javascript" src="scripts/jquery-2.2.3.min.js"></script>
     <script type="text/javascript" src="scripts/jquery.mobile-1.4.5.js"></script>
     <script type="text/javascript" src="scripts/index.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6exMsxCcVCc_UkQUP4eJVVXm2IEzSPkE"></script>
+   <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6exMsxCcVCc_UkQUP4eJVVXm2IEzSPkE"></script>-->
 </body>
 </html>
