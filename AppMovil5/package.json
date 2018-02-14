@@ -2,7 +2,6 @@
     "name": "AppMovil5",
     "version": "1.0.0",
     "private": true,
-  "dependencies": {
-    "cordova-plugin-android-permissions": "1.0.0" 
-  }
+    "dependencies": {
+    }
 }
