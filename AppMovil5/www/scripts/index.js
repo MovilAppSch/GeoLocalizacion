@@ -3,6 +3,10 @@
 // Para depurar código al cargar la página en cordova-simulate o en dispositivos o emuladores Android: inicie la aplicación, establezca puntos de interrupción 
 // y ejecute "window.location.reload()" en la Consola de JavaScript.
 (function () {
+
+    var cusLat;
+    var cusLon;
+
     "use strict";
 
     document.addEventListener('deviceready', onDeviceReady.bind(this), false);
@@ -11,7 +15,7 @@
         // Controlar la pausa de Cordova y reanudar eventos
         document.addEventListener('pause', onPause.bind(this), false);
         document.addEventListener('resume', onResume.bind(this), false);
-        //$('#btnMostrarMapa').click(getDatos);
+        $('#btnMostrarMapa').click(getDatos);
         // TODO: Cordova se ha cargado. Haga aquí las inicializaciones que necesiten Cordova.
     };
 
@@ -32,13 +36,12 @@
     }
 
     function onSuccess(position) {
-        //var cusLat = position.coords.latitude;
-        //var cusLon = position.coords.longitude;
 
-        //document.getElementById("txtLat").value = cusLat;
-        //document.getElementById("txtLon").value = cusLon;
+        document.getElementById("txtLat").value = cusLat;
+        document.getElementById("txtLon").value = cusLon;
+
         try {
-            var coords = new google.maps.LatLng(-34.78759777855034, -58.27560368047707);
+            var coords = new google.maps.LatLng(-34.78789736222144, -58.274616627559986);
 
             var opciones = {
                 center: coords, zoom: 15
