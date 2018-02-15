@@ -46,4 +46,8 @@
   <!-- Core plugins -->
   <plugin name="cordova-plugin-whitelist" spec="1.2.2" />
   <plugin name="cordova-plugin-geolocation" spec="^1.0.0" />
+  <!-- Define app icon for each platform. This is a relative path to config.xml.
+        For e.g. if you place an icon.png inside res folder, you should modify the
+        src in the following setting to "res/icon.png" -->
+  <icon src="icon.png" />
 </widget>
