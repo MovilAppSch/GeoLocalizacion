@@ -1,6 +1,6 @@
 ﻿
 document.addEventListener('deviceready', onDeviceReady.bind(this), false);
-
+$('#btnMostrarMapa').click(getDatos);
 function onDeviceReady() {
     // Controlar la pausa de Cordova y reanudar eventos
     $('#btnMostrarMapa').click(getDatos);
@@ -8,6 +8,7 @@ function onDeviceReady() {
 }
 
 function getDatos() {
+    alert("funciona");
     navigator.geolocation.getCurrentPosition(onSucces, onError, {
         maximumAge: 300000,
         timeout: 10000,
