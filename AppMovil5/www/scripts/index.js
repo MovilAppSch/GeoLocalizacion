@@ -8,11 +8,7 @@ function onDeviceReady() {
 }
 
 function getDatos() {
-    navigator.geolocation.getCurrentPosition(onSucces, onError, {
-        maximumAge: 300000,
-        timeout: 10000,
-        enableHighAccuracy: true
-    });
+    navigator.geolocation.getCurrentPosition(onSucces)
 }
 
 
