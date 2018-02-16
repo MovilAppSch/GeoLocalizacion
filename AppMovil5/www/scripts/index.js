@@ -1,14 +1,12 @@
-﻿(function () {
-    "use strict";
-    document.addEventListener('deviceready', onDeviceReady.bind(this), false);
-
-    $('#btnMostrarMapa').click(getDatos);
+﻿
+document.addEventListener('deviceready', onDeviceReady.bind(this), false);
 
 function onDeviceReady() {
     // Controlar la pausa de Cordova y reanudar eventos
     $('#btnMostrarMapa').click(getDatos);
     // TODO: Cordova se ha cargado. Haga aquí las inicializaciones que necesiten Cordova.
 }
+
 function getDatos() {
     navigator.geolocation.getCurrentPosition(onSucces, onError, {
         maximumAge: 300000,
@@ -16,6 +14,7 @@ function getDatos() {
         enableHighAccuracy: true
     });
 }
+
 
 function onSucces(position) {
     var cusLat = position.coords.latitude;
@@ -48,4 +47,4 @@ function onSucces(position) {
 function onError(err) {
     console.log("codigo de err:" + err.code + "msj = " + err.message);
 }
-})();
+

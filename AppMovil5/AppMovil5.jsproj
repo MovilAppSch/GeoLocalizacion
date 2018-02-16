@@ -85,7 +85,7 @@
     <Content Include="**\**" Exclude="**\platforms\**;**\bin\**;**\bld\**;**\node_modules\**;**\simulation\**;**\plugins\**;.gitignore;AppMovil5.*" />
   </ItemGroup>
   <ItemGroup>
-    <Content Update="config.xml2">
+    <Content Update="2">
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
