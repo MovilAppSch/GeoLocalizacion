@@ -1,6 +1,6 @@
 ﻿
 document.addEventListener('deviceready', onDeviceReady.bind(this), false);
-$('#btnMostrarMapa').click(getDatos);
+
 function onDeviceReady() {
     // Controlar la pausa de Cordova y reanudar eventos
     $('#btnMostrarMapa').click(getDatos);
@@ -8,7 +8,6 @@ function onDeviceReady() {
 }
 
 function getDatos() {
-    alert("funciona");
     navigator.geolocation.getCurrentPosition(onSucces, onError, {
         maximumAge: 300000,
         timeout: 10000,
@@ -18,31 +17,32 @@ function getDatos() {
 
 
 function onSucces(position) {
+    alert("funciona");
     var cusLat = position.coords.latitude;
     var cusLon = position.coords.longitude;
 
     document.getElementById("txtLat").value = cusLat;
     document.getElementById("txtLon").value = cusLon;
 
-    try {
-        var coords = new google.maps.LatLng(cusLat, cusLon);
+    //try {
+    //    var coords = new google.maps.LatLng(cusLat, cusLon);
 
-        var opciones = {
-            center: coords, zoom: 15
-        };
+    //    var opciones = {
+    //        center: coords, zoom: 15
+    //    };
 
-        var mapa = new google.maps.Map(document.getElementById("map"), opciones);
-        var marcador = new google.maps.Marker({
-            position: coords,
-            map: mapa,
-            title: "Mi ubicacion",
-            animation: google.maps.Animation.DROP
-        });
-    }
-    catch (err) {
-        console.log(err.message);
-        alert(err.message);
-    }
+    //    var mapa = new google.maps.Map(document.getElementById("map"), opciones);
+    //    var marcador = new google.maps.Marker({
+    //        position: coords,
+    //        map: mapa,
+    //        title: "Mi ubicacion",
+    //        animation: google.maps.Animation.DROP
+    //    });
+    //}
+    //catch (err) {
+    //    console.log(err.message);
+    //    alert(err.message);
+    //}
 }
 
 function onError(err) {
