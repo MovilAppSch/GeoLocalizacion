@@ -2,7 +2,7 @@
 // http://go.microsoft.com/fwlink/?LinkID=397704
 // Para depurar código al cargar la página en cordova-simulate o en dispositivos o emuladores Android: inicie la aplicación, establezca puntos de interrupción 
 // y ejecute "window.location.reload()" en la Consola de JavaScript.
-//Prueba funcionando
+//github porqueria
 (function () {
     "use strict";
    
